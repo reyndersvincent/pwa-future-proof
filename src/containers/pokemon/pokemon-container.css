@@ -1,0 +1,13 @@
+.pokemon-container {
+  padding: 25px;
+}
+
+.pokemons {
+  width: 100%;
+}
+
+.pokemons .pokemon {
+  width: 45%;
+  height: 150px;
+  margin: 5px;
+}
