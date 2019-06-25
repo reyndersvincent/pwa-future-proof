@@ -54,17 +54,23 @@ workbox.routing.registerRoute('/', new workbox.strategies.NetworkFirst());```
 
 	- Angular: perform following commands (these will do a lot for you. These commands will probably fail due to icons that already exist. Also remove created manifest file and use your own created in step 1)
 
-	```npm i -g @angular/cli```
-	```ng add @angular/pwa --project pwa-future-proof```
+	```
+  npm i -g @angular/cli
+  ```
+	```
+  ng add @angular/pwa --project pwa-future-proof
+  ```
 
 	Look around in the project files and see what happened.
 
 	- Native: perform precaching manually like shown in the slides with all the application files you created.
 
 	Tip:
-	```self.addEventlistener('install', event => {
+	```
+  self.addEventlistener('install', event => {
 		event.waitUntil(caches.open(CACHE_NAME).then(cache => { ... }))
-	});```
+	});
+  ```
 
 * Create a custom offline.html file and make sure the file is added to the build and precached in the service worker.
 * Make sure if the network is lost, the failure of the index.html file request displays a the custom offline.html page from the previous step.
@@ -78,13 +84,16 @@ workbox.routing.registerRoute('/', new workbox.strategies.NetworkFirst());```
 
 * Add following codesnippet to request for permission to show notifications:
 
-```Notification.requestPermission(function(status) {
+```
+Notification.requestPermission(function(status) {
     console.log('Notification permission status:', status);
-  });```
+  });
+```
 
 * Add the correct event listener to the service worker to show the push notification. Use following code inside the event callback:
 
-```if (Notification.permission === 'granted') {
+```
+if (Notification.permission === 'granted') {
     var options = {
       body: event.data.text(),
       icon: 'images/logo_128x128.png',
@@ -92,7 +101,8 @@ workbox.routing.registerRoute('/', new workbox.strategies.NetworkFirst());```
     event.waitUntil(
       self.registration.showNotification(event.data.text(), options)
     );
-  }```
+  }
+  ```
 
 * Test the push notification inside your Chrome Devtools > Application > serviceworker > push
 
