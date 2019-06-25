@@ -45,12 +45,14 @@
 * Perform precaching of your application build files
 
 	- React: Add following piece of code
-	```workbox.precaching.precacheAndRoute([
-  ...self.__precacheManifest,
-  // TODO cache icons here
-]);
+	```
+  workbox.precaching.precacheAndRoute([
+    ...self.__precacheManifest,
+    // TODO cache icons here
+  ]);
 
-workbox.routing.registerRoute('/', new workbox.strategies.NetworkFirst());```
+  workbox.routing.registerRoute('/', new workbox.strategies.NetworkFirst());
+  ```
 
 	- Angular: perform following commands (these will do a lot for you. These commands will probably fail due to icons that already exist. Also remove created manifest file and use your own created in step 1)
 
