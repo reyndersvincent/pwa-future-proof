@@ -2,7 +2,7 @@ import Axios from 'axios';
 import { from, of } from 'rxjs';
 import { switchMap, mergeMap, toArray, map } from 'rxjs/operators';
 
-const BASE_URL = 'https://pokeapi.co/api/v2';
+const BASE_URL = process.env.NODE_ENV === 'production' ? '/.netlify/functions/pokeapi' : 'https://pokeapi.co/api/v2';
 const PAGE_SIZE = 10;
 
 class PokeService {
