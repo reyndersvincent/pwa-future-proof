@@ -1,0 +1,8 @@
+<div class="pagination">
+  <button class="previous" [disabled]="page === 0" (click)="previousPage.emit(page - 1)">
+    <fa-icon [icon]="faAngleLeft"></fa-icon>
+  </button>
+  <button class="next" (click)="nextPage.emit(page + 1)">
+    <fa-icon [icon]="faAngleRight"></fa-icon>
+  </button>
+</div>

@@ -1,0 +1,22 @@
+.pagination {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #DF2A26;
+  outline: none;
+  border: 0;
+  font-size: 2em;
+  cursor: pointer;
+  color: white;
+}
+
+.pagination button:hover {
+  opacity: .5;
+}
+
+.pagination button:disabled {
+  opacity: .5;
+}
