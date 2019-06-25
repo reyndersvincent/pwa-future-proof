@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoaderComponent } from './components/loader/loader.component';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
