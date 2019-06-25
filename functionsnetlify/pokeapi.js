@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 
 const API_ENDPOINT = "https://pokeapi.co/api/v2";
-const FIXED_PART = '\.netlify\/functions\/pokeapi\/'
+const FIXED_PART = '.netlify/functions/pokeapi'
 
 exports.handler = async function(event, context, callback) {
   const URL = `${API_ENDPOINT}/${event.path.replace(FIXED_PART, '')}`;
