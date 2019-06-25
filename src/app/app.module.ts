@@ -11,7 +11,6 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoaderComponent } from './components/loader/loader.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +26,7 @@ import { LoaderComponent } from './components/loader/loader.component';
     FontAwesomeModule
   ],
   providers: [
-    { provide: "BASE_API_URL", useValue: 'https://pokeapi.co/api/v2' },
+    { provide: "BASE_API_URL", useValue: environment.baseUrl },
     PokeService
   ],
   bootstrap: [AppComponent]
