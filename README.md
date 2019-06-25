@@ -54,7 +54,7 @@
   workbox.routing.registerRoute('/', new workbox.strategies.NetworkFirst());
   ```
 
-	- Angular: perform following commands (these will do a lot for you. These commands will probably fail due to icons that already exist. Also remove created manifest file and use your own created in step 1)
+	- Angular: perform following commands (these will do a lot for you. These commands will probably fail due to icons that already exist. You can rename them and re-add them later. Also remove created manifest file and use your own created in step 1)
 
 	```
   npm i -g @angular/cli
