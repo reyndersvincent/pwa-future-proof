@@ -1,10 +1,10 @@
 const fetch = require("node-fetch");
 
 const API_ENDPOINT = "https://pokeapi.co/api/v2";
-const FIXED_PART = '.netlify/functions/pokeapi'
+const FIXED_PART = '.netlify/functions/pokeapi/'
 
 exports.handler = async function(event, context, callback) {
-  const URL = `${API_ENDPOINT}/${event.path.replace(FIXED_PART, '')}`.replace('/api/api', '/api');
+  const URL = `${API_ENDPOINT}${event.path.replace(FIXED_PART, '')}`.replace('/api/api', '/api');
   console.log(URL);
   return fetch(URL, { headers: { 'Accept': 'application/json'} })
     .then(response => response.json())
