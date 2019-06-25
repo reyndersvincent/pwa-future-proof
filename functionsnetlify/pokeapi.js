@@ -6,12 +6,10 @@ const FIXED_PART = '.netlify/functions/pokeapi/'
 exports.handler = async function(event, context, callback) {
   const URL = `${API_ENDPOINT}${event.path.replace(FIXED_PART, '')}`.replace('/api/api', '/api');
   return fetch(URL)
+    .then(response => response.json())
     .then(data => ({
       statusCode: 200,
-      headers: {
-        'Content-type': 'application/json'
-      },
-      body: data
+      body: JSON.stringify(data)
     }))
     .catch(error => {
       console.log(error);
