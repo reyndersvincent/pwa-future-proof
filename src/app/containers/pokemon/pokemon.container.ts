@@ -11,6 +11,5 @@ export class PokemonContainer {
 
   constructor(private pokeService: PokeService) {
     this.pokemons = [];
-    pokeService.getPokemons().subscribe();
   }
 }
