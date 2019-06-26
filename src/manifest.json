@@ -3,17 +3,17 @@
     "name": "Pokémon shizzl",
     "icons": [
         {
-            "src": "/assets/icons/logo_128.png",
+            "src": "/assets/icons/logo_128x128.png",
             "type": "image/png",
             "sizes": "128x128"
         },
         {
-            "src": "/assets/icons/logo_192.png",
+            "src": "/assets/icons/logo_192x192.png",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "/assets/icons/logo_512.png",
+            "src": "/assets/icons/logo_512x512.png",
             "type": "image/png",
             "sizes": "512x512"
         }
