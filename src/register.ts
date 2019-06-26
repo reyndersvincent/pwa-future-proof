@@ -1,9 +1,11 @@
 const register = (swUrl = '', config = {}) => {
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/pokedex-serviceworker.js').then(function(registration) {
+          navigator.serviceWorker.register('/pokedex-serviceworker.js')
+          .then(function(registration) {
             console.log('ServiceWorker registration successful with scope: ', registration.scope);
-          }, function(err) {
+          })
+          .catch(function(err) {
             console.log('ServiceWorker registration failed: ', err);
           });
         });
