@@ -10,6 +10,6 @@ export class PokemonContainer {
   private pokemons: any[];
 
   constructor(private pokeService: PokeService) {
-    this.pokemons = pokeService.getPokemons(1);
+    this.pokemons = [];//pokeService.getPokemons(1);
   }
 }
